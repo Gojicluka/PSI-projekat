@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    .search-box {
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      border-radius: 20px;
+    }
+  </style>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="row header align-items-center">
+        <div class="col">
+            <!-- Logo and Site Name -->
+            <div class="d-flex align-items-center">
+                <img src="images/logo.png" alt="Logo" width="40" height="40">
+                <h1 class="ml-2">Tter</h1>
+            </div>
+        </div>
+        <div class="col position-relative">
+            <!-- Search bar -->
+            <div class="search-box">
+                <input type="text" class="form-control search-input" id="searchInput" placeholder="Search...">
+                <!-- Dropdown for search results -->
+                <div id="searchDropdown" class="dropdown-menu" aria-labelledby="searchInput" style="min-width: 100%; display: none;">
+                    <!-- Populate this d    ynamically using JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="col text-right">
+             <!-- User Name -->
+            <div class="d-flex align-items-center justify-content-end">
+                <span class="mr-2">User Name</span>
+                <!-- Profile Picture -->
+                <div class="position-relative">
+                    <img src="https://lh3.bunny.novaskin.me/TSZDYqxBg_zaPfbl2SznAAV-_YMRgbMTycmiBQPfgyUFBnsYB4E38ozFhs-KdYKmpdnpBfAnYtHJ_6RNlUUrDwI_HGEmF1Ksug=rw-h400" alt="Profile Picture" width="40" height="40" style="border-radius: 50%;" id="profilePicture">
+                    <!-- Dropdown for user settings -->
+                    <div id="profileDropdown" class="dropdown-menu dropdown-menu-right text-center" style="display: none;">
+                        <a class="dropdown-item" href="user_settings.html">User Settings</a>
+                        <a class="dropdown-item" href="logout.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- ------------------------------------------------------------------------------------------- --->
+    <div class="row mt-3">
+        <!-- Left Sidebar -->
+        <div class="col-md-3 left-sidebar">
+          
+        </div>
+        
+
+        <!-- Create Group screen -->
+        <div class="col-md-6 feed">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Create Group</h5>
+                    <form id="createGroupForm">
+                        <div class="form-group">
+                            <label for="groupName">Group Name</label>
+                            <input type="text" class="form-control" id="groupName" name="groupName" placeholder="Enter group name">
+                        </div>
+                        <div class="form-group">
+                            <label for="groupType">Group Type</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="groupType" id="predmet" value="predmet" checked>
+                                <label class="form-check-label" for="predmet">Predmet</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="groupType" id="studentska" value="studentska">
+                                <label class="form-check-label" for="studentska">Studentska</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="addUserDropdown">Add Users</label>
+                            <div class="col position-relative">
+                                <!-- Search bar -->
+                                <div class="search-box">
+                                    <input type="text" class="form-control search-input" id="searchInput" placeholder="Search...">
+                                    <!-- Dropdown for search results -->
+                                    <div id="searchDropdown2" class="dropdown-menu" aria-labelledby="searchInput" style="min-width: 100%; display: none;">
+                                        <!-- Populate this d    ynamically using JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Create Group</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+  
+        <!-- Right Sidebar -->
+        <div class="col-md-3 right-sidebar">
+         
+        </div>
+      </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="script/search_dropdown.js"></script>
+<script src="script/search_dropdown2.js"></script>
+<!-- Bootstrap CSS and JS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="script/profile_dropdown.js"></script>
+
+</body>
+</html>
