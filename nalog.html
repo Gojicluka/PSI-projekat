@@ -16,6 +16,25 @@
     .search-input {
       border-radius: 20px;
     }
+    .left-sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-picture {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+        }
+        .username {
+            text-align: center;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin-bottom: 10px;
+        }
   </style>
 <body>
   <div class="container">
@@ -54,56 +73,96 @@
             </div>
         </div>
     </div>
-    <h1 class="text-center">Predmet grupa</h1>
+
+    
     <div class="row mt-3">
       <div class="col-md-3 left-sidebar">
-          <div class="col text-right  mb-2">
-              <a href="create_group.html" class="btn btn-primary btn-block">Create brainstorming arena</a>
-          </div>
-          <div class="col text-right  mb-2">
-              <a href="brainstorming_arena.html" class="btn btn-primary btn-block">Show brainstorming arenas</a>
-          </div>
-          <div class="col text-right  mb-2">
-              <a href="dodaj_korisnike.html" class="btn btn-primary btn-block">Add members</a>
-          </div>
+          <div>
+            <img src="https://static.wikia.nocookie.net/villains/images/9/9f/Freddy_fazbear_by_monsuirahab-d898wex.png/revision/latest?cb=20231009195005" alt="Profile Picture" class="profile-picture">
+        </div>
+        <div class="username">
+            <h4>Korisnicko ime</h4>
+        </div>
+        <div class="button-container">
+            <button type="button" class="btn btn-primary btn-block">Add Friend</button>
+            <button type="button" class="btn btn-primary btn-block">Send Message</button>
+        </div>
       </div>
 
-  
       <div class="col-md-6 feed">
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="What's on your mind?">
-            </div>
-            <button type="button" class="btn btn-primary">Post</button>
-          </div>
-        </div>
 
         <div class="card">
           <div class="card-body">
             <div class="post-header">
-              <img src="https://media.istockphoto.com/id/1083619800/photo/crazy-angry-professor-yelling-and-pointing-with-a-stick.jpg?s=612x612&w=0&k=20&c=ykXbJvGrrRltXpJNl9iB55cf393d4NtCkDSg9tsuqU0=" class="rounded-circle" alt="User Profile Picture" width="40" height="40">
-              <h4 class="">Profesor</h4>
+              <img src="https://static.wikia.nocookie.net/villains/images/9/9f/Freddy_fazbear_by_monsuirahab-d898wex.png/revision/latest?cb=20231009195005" class="rounded-circle" alt="User Profile Picture" width="40" height="40">
+              <h4 class="">Korisnicko ime</h4>
               <span class="post-date ml-auto">March 11, 2024</span>
             </div>
             <div class="post-content">
-              <p>Racunar.</p>
-              <img src="https://www.nutsvolts.com/uploads/articles/NV_0501_Byers_Large.jpg" class="img-fluid" alt="Posted Image">
+              <p>This is a sample post text. It can contain text, images, etc.</p>
+              <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821_640.jpg" class="img-fluid" alt="Posted Image">
             </div>
             <br>
             <div class="post-actions">
               <button class="btn btn-primary like-btn">
                 &#x1F44D;
               </button>
-              <span class="like-count">1</span>
+              <span class="like-count">0</span>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="post-header">
+              <img src="https://static.wikia.nocookie.net/villains/images/9/9f/Freddy_fazbear_by_monsuirahab-d898wex.png/revision/latest?cb=20231009195005" class="rounded-circle" alt="User Profile Picture" width="40" height="40">
+              <h4 class="">Korisnicko ime</h4>
+              <span class="post-date ml-auto">March 11, 2024</span>
+            </div>
+            <div class="post-content">
+              <p>This is a sample post text. It can contain text, images, etc.</p>
+              <img src="https://www.worldatlas.com/r/w1200/upload/ff/f6/ca/shutterstock-526092568.jpg" class="img-fluid" alt="Posted Image">
+            </div>
+            <br>
+            <div class="post-actions">
+              <button class="btn btn-primary like-btn">
+                &#x1F44D;
+              </button>
+              <span class="like-count">0</span>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+          <div class="card-body">
+            <div class="post-header">
+              <img src="https://static.wikia.nocookie.net/villains/images/9/9f/Freddy_fazbear_by_monsuirahab-d898wex.png/revision/latest?cb=20231009195005" class="rounded-circle" alt="User Profile Picture" width="40" height="40">
+              <h4 class="">Korisnicko ime</h4>
+              <span class="post-date ml-auto">March 11, 2024</span>
+            </div>
+            <div class="post-content">
+              <p>This is a sample post text. It can contain text, images, etc.</p>
+              <img src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" class="img-fluid" alt="Posted Image">
+            </div>
+            <br>
+            <div class="post-actions">
+              <button class="btn btn-primary like-btn">
+                &#x1F44D;
+              </button>
+              <span class="like-count">0</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 right-sidebar">
-        
-      </div>
+      </div>  
+
+
     </div>
   </div>
 
