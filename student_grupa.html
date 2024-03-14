@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    .search-box {
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      border-radius: 20px;
+    }
+  </style>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="row header align-items-center">
+        <div class="col">
+            <!-- Logo and Site Name -->
+            <div class="d-flex align-items-center">
+                <img src="images/logo.png" alt="Logo" width="40" height="40">
+                <h1 class="ml-2">Tter</h1>
+            </div>
+        </div>
+        <div class="col position-relative">
+            <!-- Search bar -->
+            <div class="search-box">
+                <input type="text" class="form-control search-input" id="searchInput" placeholder="Search...">
+                <!-- Dropdown for search results -->
+                <div id="searchDropdown" class="dropdown-menu" aria-labelledby="searchInput" style="min-width: 100%; display: none;">
+                    <!-- Populate this dynamically using JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="col text-right">
+             <!-- User Name -->
+            <div class="d-flex align-items-center justify-content-end">
+                <span class="mr-2">User Name</span>
+                <!-- Profile Picture -->
+                <div class="position-relative">
+                    <img src="https://static.wikia.nocookie.net/villains/images/9/9f/Freddy_fazbear_by_monsuirahab-d898wex.png/revision/latest?cb=20231009195005" alt="Profile Picture" width="40" height="40" style="border-radius: 50%;" id="profilePicture">
+                    <!-- Dropdown for user settings -->
+                    <div id="profileDropdown" class="dropdown-menu dropdown-menu-right text-center" style="display: none;">
+                        <a class="dropdown-item" href="user_settings.html">User Settings</a>
+                        <a class="dropdown-item" href="logout.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--- ------------------------------------------------------------------------------------------- --->
+    <!-- Sidebars and Feed -->
+    <h1 class="text-center">Student grupa</h1>
+    <div class="row mt-3">
+      <!-- Left Sidebar -->
+      <div class="col-md-3 left-sidebar">
+        <!-- Content for left sidebar -->
+      </div>
+      
+      <!-- Feed -->
+      <div class="col-md-6 feed">
+        <!-- Status box -->
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="What's on your mind?">
+            </div>
+            <button type="button" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+        
+        <!-- Sample post -->
+        <div class="card">
+          <div class="card-body">
+            <div class="post-header">
+              <img src="data:image/jpeg;base64,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" class="rounded-circle" alt="User Profile Picture" width="40" height="40">
+              <h4 class="">Stefan</h4>
+              <span class="post-date ml-auto">March 11, 2024</span>
+            </div>
+            <div class="post-content">
+              <p>Volim etf fakultet.</p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Fakultet_elektrotehnicki_u_beogradu_ulaz.jpg/1200px-Fakultet_elektrotehnicki_u_beogradu_ulaz.jpg" class="img-fluid" alt="Posted Image">
+            </div>
+            <br>
+            <div class="post-actions">
+              <!-- Like button with counter -->
+              <button class="btn btn-primary like-btn">
+                <!-- Like emoji -->
+                &#x1F44D;
+              </button>
+              <span class="like-count">1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="col-md-3 right-sidebar">
+        
+      </div>
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="script/search_dropdown.js"></script>
+<!-- Bootstrap CSS and JS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="script/profile_dropdown.js"></script>
+
+</body>
+</html>
