@@ -3,7 +3,7 @@
 const friends = [
     { name: "Friend 1", picture: "images/friend1.png" },
     { name: "Friend 2", picture: "images/friend1.png"  },
-    { name: "Friend 3", picture: "  images/friend1.png"  }
+    { name: "Friend 3", picture: "images/friend1.png"  }
 ];
 
 // Function to populate the dropdown with search results
